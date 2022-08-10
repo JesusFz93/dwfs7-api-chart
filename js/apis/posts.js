@@ -1,8 +1,11 @@
 import { getId, getForm } from "../utils/posts.js";
 const postApi = "https://jsonplaceholder.typicode.com";
+import { makeChart } from '../chart/chart.js';
 
 export const getPostsApi = async () => {
+  makeChart();
   return await axios.get(`${postApi}/posts`);
+
 };
 
 export const getPostApi = async () => {
